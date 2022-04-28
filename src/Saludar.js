@@ -1,8 +1,19 @@
 import React from "react";
 import { Text } from "react-native";
 
-function Saludar({ name }) {
-  return <Text>Hola {name}</Text>;
+function Saludar({ firstName, lastName }) {
+  // const name = firstName || "enrique";
+  // const apellido = lastName || "Galdon";
+
+  return (
+    <Text>
+      Hola {firstName} {lastName}
+    </Text>
+  );
 }
 
+Saludar.defaultProps = {
+  firstName: "Elon",
+  lastName: "Musk",
+};
 export default Saludar;
