@@ -1,10 +1,8 @@
 import React from "react";
 import { Text } from "react-native";
+import PropTypes from "prop-types";
 
 function Saludar({ firstName, lastName }) {
-  // const name = firstName || "enrique";
-  // const apellido = lastName || "Galdon";
-
   return (
     <Text>
       Hola {firstName} {lastName}
@@ -12,8 +10,12 @@ function Saludar({ firstName, lastName }) {
   );
 }
 
-Saludar.defaultProps = {
-  firstName: "Elon",
-  lastName: "Musk",
+// Saludar.defaultProps = {
+//   firstName: "Elon",
+//   lastName: "Musk",
+// };
+Saludar.propTypes = {
+  firstName: PropTypes.string.isRequired,
+  lastName: PropTypes.string.isRequired,
 };
 export default Saludar;
